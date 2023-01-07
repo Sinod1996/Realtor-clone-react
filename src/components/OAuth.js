@@ -27,7 +27,8 @@ function OAuth(props) {
                 });
             }
             navigate("/");
-        }catch (error) {
+        }
+        catch (error) {
             toast.error('Could not authorize with Google ')
         }
     }
