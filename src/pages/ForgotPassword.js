@@ -8,7 +8,7 @@ import {getAuth, sendPasswordResetEmail} from "firebase/auth";
 function ForgotPassword(props) {
     const [email, setEmail] = useState("");
 
-    const onChange = (e) => {
+    const handleChange = (e) => {
         setEmail(e.target.value);
     }
     const handleSubmit = async (e) => {
@@ -42,7 +42,7 @@ function ForgotPassword(props) {
                             type="email"
                             id={"email"}
                             value={email}
-                            onChange={onChange}
+                            onChange={handleChange}
                             placeholder={"Email address"}
                         />
                         <div className={'flex justify-between whitespace-nowrap ' +

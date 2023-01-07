@@ -14,7 +14,7 @@ function SignIn(props) {
     });
     const navigate = useNavigate();
     const {email, password} = formData;
-    const onChange = (e) => {
+    const handleChange = (e) => {
       setFormData((prevState) => ({
           ...prevState,
           [e.target.id]: e.target.value
@@ -52,7 +52,7 @@ function SignIn(props) {
                             type="email"
                             id={"email"}
                             value={email}
-                            onChange={onChange}
+                            onChange={handleChange}
                             placeholder={"Email address"}
                         />
                         <div className={'relative mb-6'}>
@@ -62,7 +62,7 @@ function SignIn(props) {
                                 type={showPassword ? "text" : "password"}
                                 id={"password"}
                                 value={password}
-                                onChange={onChange}
+                                onChange={handleChange}
                                 placeholder={"Password"}
                             />
                             {showPassword
