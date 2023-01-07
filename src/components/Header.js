@@ -4,9 +4,6 @@ import React from 'react';
 function Header(props) {
     const location = useLocation();
     const navigate = useNavigate();
-
-    console.log(location.pathname);
-
     function pathMathRoute(route) {
         if (route === location.pathname) {
             return true
